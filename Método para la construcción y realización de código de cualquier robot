@@ -1,0 +1,41 @@
+Método para escribir código de cualquier proyecto Arduino:
+
+
+Determinar qué hará primero el robot.
+
+1. Moverse hacia adelante
+2. Moverse hacia atrás
+3. Moverse hacia la izquierda
+4. Moverse hacia la derecha
+5. Dar la vuelta
+6. Detenerse
+
+Determinar cómo va a cambiar de dirección de movimiento.
+
+Sensor
+Puerto Serial
+Aplicación remota
+
+Si usa sensor necesita lectura de datos como: 
+
+1. Distancia
+2. Comparar distancia
+3. Información booleana
+
+Si usa puerto Serial:
+
+1. Comunicación con puerto Serial
+
+Si usa aplicación Remota:
+
+1. Comunicación con la aplicación
+
+Determinar qué componentes va a necesitar, de acuerdo con los requisitos y necesidades anteriores.
+
+1. Qué tipo de motores, cuántos y si necesitan algún controlador extra
+2. Qué tipo de sensores, cuántos y de qué tipo, si son analógicos o digitales
+3. Alguna plataforma o configuración para montar el robot
+4. Piezas mecánicas para el movimiento del robot
+5. Requerimientos energéticos
+
+Determinar las librerias que se necesitarán, de acuerdo con el tipo de motores o sensores
