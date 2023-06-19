@@ -7,8 +7,8 @@
 
 //Variables
 
-int angulo1 = 90;
-int angulo2 = 90;
+int angulo1 = 0;
+int angulo2 = 0;
 char val;
 
 //Objetos Servo
@@ -19,7 +19,7 @@ Servo servo2;
 // Objeto motor dc
 
 AF_DCMotor motor1(1,MOTOR12_2KHZ);
-AF_DCMotor motor2(4,MOTOR12_2KHZ);
+AF_DCMotor motor2(2,MOTOR12_2KHZ);
 
 void setup() {
   Serial.begin(9600);
@@ -36,7 +36,7 @@ void loop() {
     val = Serial.read();
     }
  
-  if (val == 'd')
+  if (val == 'a')
   {
     angulo1 = angulo1 + 5; //Se aumenta el angulo en 5 grados
     Serial.print(angulo1); // Se envía el valor puerto serial
@@ -45,7 +45,7 @@ void loop() {
     delay(100);
     }
 
-  else if (val == 'i')
+  else if (val == 'b')
   {
     angulo1 = angulo1 - 5; //Se aumenta el angulo en 5 grados
     Serial.print(angulo1); // Se envía el valor puerto serial
@@ -55,7 +55,7 @@ void loop() {
     }
 
 
-  else if (val == 'e')
+  else if (val == 'c')
   {
     angulo2 = angulo2 + 5; //Se aumenta el angulo en 5 grados
     Serial.print(angulo2); // Se envía el valor puerto serial
@@ -64,7 +64,7 @@ void loop() {
     delay(100);      
     }
 
-  else if (val == 'f')
+  else if (val == 'c')
   {
     angulo2 = angulo2 - 5; //Se aumenta el angulo en 5 grados
     Serial.print(angulo2); // Se envía el valor puerto serial
@@ -73,19 +73,29 @@ void loop() {
     delay(100);     
     }            
 
-  else if( val == 'l')
+  else if( val == 'd')
   {
     motor1.run(FORWARD);
     motor2.run(FORWARD);
     Serial.println(val);
     } 
     
-  else if( val == 'n')
+  else if( val == 'f')
   {
     motor1.run(BACKWARD);
     motor2.run(BACKWARD);
     Serial.println(val);
     }  
+
+ else if (val == "g")
+ {
+  motor1.run(RELEASE);
+  motor2.run(RELEASE);
+  Serial.print(val);
+  }
+
+ 
+}
 
  else if (val == "z")
  {
